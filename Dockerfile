@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo yum -y install docker;
 sudo service docker start;
 sudo docker pull nginx;
