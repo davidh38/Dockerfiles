@@ -1,0 +1,10 @@
+sudo yum -y install docker;
+sudo service docker start;
+mkdir Webserver;
+cd Webserver;
+echo "
+FROM nginx
+COPY index.html /usr/share/nginx/html" >> Dockerfile;
+echo "hello" >> index.html;
+sudo docker build -t nginx .;
+sudo docker run -d -p 80:80 nginx;
